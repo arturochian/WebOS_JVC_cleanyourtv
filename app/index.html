@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>TV Home</title>
+  <meta name="viewport" content="width=1920, height=1080, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Dual Ambient Glow Layers -->
+  <div id="ambientA" class="ambient-glow"></div>
+  <div id="ambientB" class="ambient-glow"></div>
+
+  <!-- Main Launcher Interface -->
+  <main id="app">
+    <!-- Header with Apple TV Style Top Shelf -->
+    <header class="header">
+      <div class="header-left">
+        <div id="greeting" class="greeting">Buenas noches</div>
+        <div id="clock" class="clock-display">12:00 PM</div>
+      </div>
+
+      <!-- Top Shelf Focus Area (CleanYourTV / tvOS signature) -->
+      <div class="top-shelf" id="topShelf">
+        <div class="shelf-title" id="shelfTitle">Movistar TV App</div>
+        <div class="shelf-tag" id="shelfTag">TV en Vivo & Deportes</div>
+      </div>
+
+      <div class="header-right">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span id="networkStatus">Conectado</span>
+        </div>
+        <button id="btnInputs" class="header-btn" data-type="header" data-action="inputs">Entradas</button>
+        <button id="btnSettings" class="header-btn" data-type="header" data-action="settings">Ajustes</button>
+      </div>
+    </header>
+
+    <!-- Favorites Dock (tvOS Floating Glass Capsule) -->
+    <section class="dock-section">
+      <h2 class="section-title">Favoritos</h2>
+      <div id="dockContainer" class="dock-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- All Applications Grid (Squircles Grid) -->
+    <section class="grid-section">
+      <h2 class="section-title">Todas las Aplicaciones</h2>
+      <div id="appsGrid" class="apps-grid">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+  </main>
+
+  <!-- External Inputs Drawer Modal -->
+  <div id="inputsModal" class="modal-overlay">
+    <div class="modal-card">
+      <h2 class="modal-title">Entradas de Video</h2>
+      <p class="modal-subtitle">Cambia a HDMI, AV o sintonizador de TV</p>
+      <div id="inputsList" class="inputs-list">
+        <!-- Rendered dynamically -->
+      </div>
+      <p class="close-hint">Presiona ATRÁS (BACK) en el control para cerrar</p>
+    </div>
+  </div>
+
+  <!-- Settings & Device Info Modal -->
+  <div id="settingsModal" class="modal-overlay">
+    <div class="modal-card">
+      <h2 class="modal-title">Ajustes de TV Home</h2>
+      <p class="modal-subtitle">JVC Smart TV (LG webOS Hub)</p>
+      <div class="settings-info">
+        <p><strong>Acceso Rápido:</strong> Mantén presionado el botón <strong>1</strong> o <strong>2</strong> en tu control remoto para abrir TV Home con un solo toque.</p>
+        <p><strong>Experiencia Limpia:</strong> Sin anuncios, sin filas patrocinadas, máximo rendimiento a 60 FPS.</p>
+        <p><strong>Edición:</strong> CleanYourTV Windows Edition (JVC LT-32KB116)</p>
+        <p><strong>Navegación:</strong> Flechas para moverte, OK para abrir, Atrás para salir.</p>
+      </div>
+      <p class="close-hint">Presiona ATRÁS (BACK) en el control para cerrar</p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="config.js"></script>
+  <script src="apps.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

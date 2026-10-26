@@ -1,0 +1,21 @@
+{
+  "id": "com.gathin.tvhome",
+  "version": "1.0.0",
+  "vendor": "CleanYourTV",
+  "type": "web",
+  "main": "index.html",
+  "title": "TV Home",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png",
+  "bgColor": "#000000",
+  "resolution": "1920x1080",
+  "disableBackHistoryAPI": true,
+  "requiredPermissions": [
+    "application.launcher",
+    "network.query"
+  ],
+  "requiredACG": [
+    "application.launcher",
+    "network.query"
+  ]
+}

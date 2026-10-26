@@ -1,0 +1,2 @@
+# This file ensures the backup directory exists in the repository structure.
+# Actual device snapshots are excluded via .gitignore.
